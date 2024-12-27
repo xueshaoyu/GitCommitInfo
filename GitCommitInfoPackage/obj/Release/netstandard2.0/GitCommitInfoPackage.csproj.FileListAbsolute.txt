@@ -1,0 +1,11 @@
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\bin\Release\netstandard2.0\GitCommitInfoPackage.deps.json
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\bin\Release\netstandard2.0\GitCommitInfoPackage.dll
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\bin\Release\netstandard2.0\GitCommitInfoPackage.pdb
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.csproj.AssemblyReference.cache
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.AssemblyInfoInputs.cache
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.AssemblyInfo.cs
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.csproj.CoreCompileInputs.cache
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.sourcelink.json
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.dll
+C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\obj\Release\netstandard2.0\GitCommitInfoPackage.pdb

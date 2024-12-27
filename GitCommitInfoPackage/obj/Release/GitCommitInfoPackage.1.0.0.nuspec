@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GitCommitInfoPackage</id>
+    <version>1.0.0</version>
+    <authors>GitCommitInfoPackage</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="d50ddec6e49ca136e3ceddca89b9e1160a737d56" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\daijianping\source\repos\GitCommitInfo\GitCommitInfoPackage\bin\Release\netstandard2.0\GitCommitInfoPackage.dll" target="lib\netstandard2.0\GitCommitInfoPackage.dll" />
+  </files>
+</package>
