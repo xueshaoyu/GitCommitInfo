@@ -1,0 +1,2 @@
+# GitCommitInfo
+一个帮助你将git提交信息编译进程序的示例库
