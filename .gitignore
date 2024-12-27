@@ -1,8 +1,8 @@
 ﻿################################################################################
 # 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
 ################################################################################
-
-/GitCommitInfo/bin/Debug/netstandard2.0
+.vs/
+/GitCommitInfo/bin/
 /GitCommitInfo/obj
 /GitCommitInfo/git_commit_subject.txt
 /GitCommitInfo/GitCommitInfo.cs

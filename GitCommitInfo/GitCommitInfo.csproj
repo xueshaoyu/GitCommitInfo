@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <Target Name="GetGitCommitInfo" BeforeTargets="PreBuildEvent">
+        <Exec Command="git log -1 &gt; $(ProjectDir)git_commit_subject.txt" ContinueOnError="true"/>
+    </Target>
+    <ItemGroup>
+        <EmbeddedResource Include="$(ProjectDir)git_commit_subject.txt">
+            <LogicalName>Git.Commit.Subject</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup> 
+
+    <ItemGroup>
+        <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="GitCommitInfo.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>GitCommitInfo.tt</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
