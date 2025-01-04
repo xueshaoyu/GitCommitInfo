@@ -1,0 +1,71 @@
+<#@ template language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ import namespace="System.IO" #>
+namespace GitCommitInfo
+{
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Reflection;
+
+    public class GitInfo
+    {
+        public string CommitHash{ get;set; }
+        public string CommitAuthor{ get;set; }
+        public DateTime CommitDate{ get;set; } = DateTime.MinValue;
+    }
+
+    public static class GitCommitInfo
+    { 
+        static GitCommitInfo()
+        {
+            try
+            {   using (var subjectStream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Git.Commit.Subject"))
+                {
+                    var text = new List<string>();
+                    using (var reader = new StreamReader(subjectStream))
+                    {
+                        string line;
+                        var count = 0;
+                        while ((line = reader.ReadLine()) != null)
+                        {
+                            text.Add(line);
+                            count++;
+                            if (count > 3)
+                            {
+                                break;
+                            }
+                        }
+                    } 
+                    if (text.Count >= 3)
+                    {                  
+                        gitInfo.CommitHash = text[0].Replace("commit", "").Trim();
+                        gitInfo.CommitAuthor = text[1].Replace("Author:", "").Trim();
+                        if(DateTime.TryParse(text[2].Replace("Date:", "").Trim(),out var date))
+                        {
+                            gitInfo.CommitDate = date;
+                        }
+                    }
+                }
+            }
+            catch
+            { 
+            }
+        }
+
+        public static GitInfo gitInfo = new GitInfo();
+        public static GitInfo GitInfo
+        {
+            get
+            {              
+                return gitInfo;
+            }
+        }      
+    }
+}
